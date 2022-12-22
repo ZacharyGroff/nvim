@@ -37,15 +37,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = 'unnamedplus'
 
--- debugger
-vim.cmd("let g:vimspector_enable_mappings = 'HUMAN'")
-vim.cmd("nmap <F2> :VimspectorReset<CR>")
-
--- remap multi-select insert caret keys
-vim.cmd("let g:VM_maps = {}")
-vim.cmd("let g:VM_maps['Add Cursor Down'] = '<A-Down>'")
-vim.cmd("let g:VM_maps['Add Cursor Up'] = '<A-Up>'")
-
 -- lsp
 require'lspconfig'.pyright.setup{}
 
@@ -55,4 +46,4 @@ lsp.setup()
 
 require('colorscheme').setup()
 require('statusline').setup()
-
+require('keybindings').setup()
