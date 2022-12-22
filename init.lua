@@ -1,5 +1,7 @@
 local Plug = vim.fn['plug#']
 
+require('linting')
+
 vim.call('plug#begin')
 Plug 'scrooloose/nerdtree'
 Plug 'shaunsingh/solarized.nvim'
@@ -77,18 +79,4 @@ require'lspconfig'.pyright.setup{}
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 lsp.setup()
-
-
--- autolint on save with autopep8
-vim.api.nvim_create_autocmd(
-	"BufWritePost",
-	{ 
-		pattern = "*.py",
-		callback = function()
-			local current_file = vim.fn.expand('%')
-			os.execute("autopep8 -i " .. current_file)
-			vim.cmd('checktime')
-		end,
-	}
-)
 
