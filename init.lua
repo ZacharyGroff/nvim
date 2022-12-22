@@ -37,11 +37,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = 'unnamedplus'
 
--- colorscheme
-vim.cmd('set termguicolors')
-vim.cmd('set background=light')
-vim.cmd('colorscheme solarized')
-
 -- debugger
 vim.cmd("let g:vimspector_enable_mappings = 'HUMAN'")
 vim.cmd("nmap <F2> :VimspectorReset<CR>")
@@ -58,4 +53,6 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 lsp.setup()
 
+require('colorscheme').setup()
 require('statusline').setup()
+
