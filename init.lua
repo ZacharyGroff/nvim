@@ -10,6 +10,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'mg979/vim-visual-multi'
 Plug 'puremourning/vimspector'
 
+-- iamcco/markdown-preview.nvim
+Plug('iamcco/markdown-preview.nvim', {['do'] = vim.fn['cd app && yarn install']})
+
 -- folke/trouble.nvim
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
