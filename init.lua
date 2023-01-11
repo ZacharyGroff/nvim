@@ -10,6 +10,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'mg979/vim-visual-multi'
 Plug 'puremourning/vimspector'
 
+-- numirias/semshi
+Plug('numirias/semshi')
+
 -- iamcco/markdown-preview.nvim
 Plug('iamcco/markdown-preview.nvim', {['do'] = vim.fn['cd app && yarn install']})
 
