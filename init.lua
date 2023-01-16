@@ -10,6 +10,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'mg979/vim-visual-multi'
 Plug 'puremourning/vimspector'
 
+-- lukas-reineke/indent-blankline.nvim
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 -- nvim-treesitter/nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
 
@@ -92,6 +95,12 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+}
+
+-- lukas-reineke/indent-blankline.nvim
+require("indent_blankline").setup {
+    show_current_context = true,
+    show_current_context_start = true,
 }
 
 require('colorscheme').setup()
