@@ -16,9 +16,14 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 -- tpope/vim-fugitive
 Plug 'tpope/vim-fugitive'
 
+
 -- nvim-telescope/telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.1' })
+
+-- ThePrimeagen/harpoon
+-- Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
 
 -- nvim-treesitter/nvim-treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -30,6 +35,9 @@ Plug('iamcco/markdown-preview.nvim', {['do'] = vim.fn['cd app && yarn install']}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 
+-- L3MON4D3/LuaSnip
+Plug 'L3MON4D3/LuaSnip'
+
 -- lsp plugins from lsp-zero
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
@@ -40,7 +48,6 @@ Plug 'hrsh7th/cmp-path'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 vim.call('plug#end')
