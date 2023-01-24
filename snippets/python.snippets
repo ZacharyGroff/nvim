@@ -1,0 +1,69 @@
+snippet bt
+	def is_valid_state(state):
+		# check if it is a valid solution
+		return True
+
+	def get_candidates(state):
+		return []
+
+	def search(state, solutions):
+		if is_valid_state(state):
+			solutions.append(state.copy())
+			# return
+
+		for candidate in get_candidates(state):
+			state.add(candidate)
+			search(state, solutions)
+			state.remove(candidate)
+
+	def solve():
+		solutions = []
+		state = set()
+		search(state, solutions)
+		return solutions
+
+snippet doc_module
+	"""A one line summary of the module or program, terminated by a period.
+
+	An overall description of the module or program.  Optionally, it may also
+	contain a brief description of exported classes and functions and/or usage
+	examples.
+
+	Typical usage example:
+
+	  foo = ClassFoo()
+	  bar = foo.FunctionBar()
+	"""
+
+snippet doc_test_module
+	"""This blaze test uses golden files.
+
+	You can update those files by running
+	`blaze run //foo/bar:foo_test -- --update_golden_files` from the `google3`
+	directory.
+	"""
+
+snippet doc_function
+    """Short description 
+
+	Long description
+
+    Args:
+        arg_name: arg_description 
+
+    Returns:
+		Description of type and semantics of return value
+
+    Raises:
+        error: error_description 
+    """
+
+snippet doc_class
+	"""Summary of class here.
+
+    Longer class information...
+
+    Attributes:
+        likes_spam: A boolean indicating if we like SPAM or not.
+        eggs: An integer count of the eggs we have laid.
+    """

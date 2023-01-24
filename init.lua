@@ -108,6 +108,15 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- L3MON4D3/LuaSnip
+local ls = require("luasnip")
+require("luasnip.loaders.from_snipmate").load({ path = { "~/.config/nvim/snippets" } })
+ls.config.set_config({
+	history = true,
+	updateevents = "TextChanged,TextChangedI",
+	enable_autosnippets = true,
+})
+
 -- lukas-reineke/indent-blankline.nvim
 require("indent_blankline").setup {
     show_current_context = true,
