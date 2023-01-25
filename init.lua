@@ -59,6 +59,10 @@ vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.smartindent= true
+vim.opt.scrolloff = 8
 
 -- lsp
 require'lspconfig'.pyright.setup{}

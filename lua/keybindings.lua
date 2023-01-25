@@ -23,7 +23,7 @@ function setup()
 
 	-- harpoon
 	local mark = require("harpoon.mark")
-	local ui = require("harpoon.ui")
+	vim.keymap.set("x", "<leader>p", [["_dP]])local ui = require("harpoon.ui")
 	vim.keymap.set("n", "<leader>a", mark.add_file)
 	vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
@@ -31,6 +31,20 @@ function setup()
 	vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
 	vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
 	vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+
+	-- move highlighted lines
+	vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+	vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+	-- keep cursor in middle while half-screen jumping
+	vim.keymap.set("n", "<C-d>", "<C-d>zz")
+	vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+	-- preserve copied value when pasting over highlighted word
+	vim.keymap.set("x", "<leader>p", [["_dP]])
+
+	-- make current file executable
+	vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 end
 
 M = {
