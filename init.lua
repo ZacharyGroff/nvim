@@ -87,8 +87,8 @@ lsp.setup()
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
-  -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "help", "python" },
+  -- A list of parser names, or "all"
+  ensure_installed = { "c", "lua", "vim", "help", "python", "typescript" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
