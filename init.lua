@@ -52,6 +52,7 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'VonHeikemen/lsp-zero.nvim'
 vim.call('plug#end')
 
+vim.g.mapleader = "="
 vim.opt.ignorecase = true
 vim.opt.showmatch = true
 vim.opt.number = true
