@@ -4,21 +4,10 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      autoformat = false,
       ---@type lspconfig.options
       servers = {
-        pylsp = {
-          settings = {
-            pylsp = {
-              plugins = {
-                -- type checker
-                pylsp_mypy = { enabled = true },
-                -- auto-completion options
-                jedi_completion = { enabled = true, fuzzy = true },
-              },
-            },
-          },
-        },
+        -- pyright will be automatically installed with mason and loaded with lspconfig
+        pyright = {},
       },
     },
   },
