@@ -7,19 +7,8 @@ return {
       autoformat = false,
       ---@type lspconfig.options
       servers = {
-        pylsp = {
-          settings = {
-            pylsp = {
-              plugins = {
-                -- type checker
-                pylsp_mypy = { enabled = true },
-                -- auto-completion options
-                jedi_completion = { enabled = true, fuzzy = true },
-              },
-            },
-          },
-        },
-      },
+        pyright = {}
+      }
     },
   },
 }
