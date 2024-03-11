@@ -13,3 +13,9 @@ vim.keymap.set("n", "<leader>CG", function()
     vim.notify('Copied new guid to clipboard')
 end)
 
+
+vim.keymap.set("n", "<leader>RL", function()
+    require("config.utils").ReloadLSP()
+    vim.notify("LSP Reloaded!")
+end, {desc = "Reload LSP"})
+
