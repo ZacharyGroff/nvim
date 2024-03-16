@@ -19,3 +19,24 @@ vim.keymap.set("n", "<leader>RL", function()
     vim.notify("LSP Reloaded!")
 end, {desc = "Reload LSP"})
 
+vim.keymap.set("n", "<C-t>", function()
+  require("lazyvim.util").terminal.open({ "lazysql" }, {
+    cwd = require("lazyvim.util").root.get(),
+    ctrl_hjkl = false,
+    border = "rounded",
+    persistent = false,
+    title = "lazysql",
+    title_pos = "center",
+  })
+end, {desc = "lazysql"})
+
+vim.keymap.set("n", "<C-d>", function()
+  require("lazyvim.util").terminal.open({ "lazydocker" }, {
+    cwd = require("lazyvim.util").root.get(),
+    ctrl_hjkl = false,
+    border = "rounded",
+    persistent = false,
+    title = "lazydocker",
+    title_pos = "center",
+  })
+end, {desc = "lazydocker"})
