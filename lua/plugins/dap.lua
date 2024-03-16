@@ -55,8 +55,6 @@ return {
       },
       config = function()
         require("dap-python").test_runner = "pytest"
-        local path = require("mason-registry").get_package("debugpy"):get_install_path()
-        require("dap-python").setup(path .. "/venv/bin/python")
       end,
     },
 
