@@ -6,7 +6,6 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-<<<<<<< HEAD
         pyright = {},
       gopls = {
         keys = {
@@ -49,10 +48,6 @@ return {
             semanticTokens = true,
           },
         },
-=======
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
->>>>>>> 2954840af2e418de730ace8f8037dea5e997c3f9
       },
       },
     setup = {
